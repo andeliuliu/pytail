@@ -1,0 +1,14 @@
+{
+  "name": "pytail",
+  "owner": {
+    "name": "Andrew Liu",
+    "url": "https://github.com/andeliuliu"
+  },
+  "plugins": [
+    {
+      "name": "pytail",
+      "source": "./",
+      "description": "Lazy senior-dev mode for Python (a sibling of railtail, forked from ponytail)."
+    }
+  ]
+}
