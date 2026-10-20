@@ -1,5 +1,6 @@
 {
   "name": "pytail",
+  "description": "Lazy senior-dev mode for Python, as a Claude Code plugin.",
   "owner": {
     "name": "Andrew Liu",
     "url": "https://github.com/andeliuliu"
