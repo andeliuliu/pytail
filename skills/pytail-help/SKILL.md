@@ -31,6 +31,7 @@ Level sticks until changed or session end. While on, every response opens with
 |-------|---------|--------------|
 | **pytail** | `/pytail` | Lazy mode itself. Simplest solution that works, a function before a class, stdlib before a package. |
 | **pytail-review** | `/pytail-review` | Over-engineering review of this branch's diff vs parent (or a file/staged changes you point at): ranked list of what to delete/reuse/shrink. `L12: stdlib: cache class. @lru_cache.` |
+| **pytail-audit** | `/pytail-audit [path]` | The same over-engineering review across the whole repo (or one package): also unused dependencies, modules nothing calls, logic written twice. Tests are left to pytail-tests. |
 | **pytail-pr-commenter** | `/pytail-pr-commenter [PR] [--top-k K]` | Discover once, verify ranked candidates until K survive (default 10) or candidates run out, then post one comment. `--dry-run` previews. |
 | **pytail-tests** | `/pytail-tests` | Over-testing review — which tests to cut: redundant, library-trivial, tautological-mock, dead, or near-duplicates `parametrize` would merge. |
 | **pytail-help** | `/pytail-help` | This card. |
@@ -42,7 +43,7 @@ preserve the failure signal. There is no convergence loop.
 ## Parallel work
 
 For 12 or more files that form independent areas, `pytail`, `pytail-review`,
-and `pytail-tests` may use up to three subagents while one coordinator owns
+`pytail-audit` and `pytail-tests` may use up to three subagents while one coordinator owns
 shared context, deduplication, and final verification. Tightly coupled or
 smaller work stays with one agent. This help card never delegates.
 

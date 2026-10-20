@@ -1,7 +1,7 @@
 {
   "name": "pytail",
-  "version": "1.0.0",
-  "description": "Lazy senior-dev mode for Python: reuse what's in the repo and the standard library before custom code, a function before a class, one line before fifty. Reviews cut code and test over-engineering. Levels: lite/full/ultra. A Python-flavored sibling of railtail, forked from ponytail.",
+  "version": "1.1.0",
+  "description": "Lazy senior-dev mode for Python: reuse what's in the repo and the standard library before custom code, a function before a class, one line before fifty. Reviews and repo-wide audits cut code and test over-engineering. Levels: lite/full/ultra. A Python-flavored sibling of railtail, forked from ponytail.",
   "author": {
     "name": "Andrew Liu",
     "url": "https://github.com/andeliuliu"
